@@ -281,6 +281,15 @@ body{
   filter: drop-shadow(0 0 25px var(--solana-green))
           drop-shadow(0 0 40px var(--green-neon));
 }
+.news-link {
+  color: var(--solana-green);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.news-link:hover {
+  text-shadow: 0 0 10px var(--solana-green);
+}
 
 
 /* MOBILE — FULL WIDTH NEWS CARDS */
