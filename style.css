@@ -290,6 +290,15 @@ body{
 .news-link:hover {
   text-shadow: 0 0 10px var(--solana-green);
 }
+/* FIX: Make ALL news box corners fully rounded */
+.news-box,
+.news-box:nth-child(odd),
+.news-box:nth-child(even) {
+    border-radius: 18px !important;
+    align-self: center !important; /* optional — makes them line up perfectly */
+}
+
+
 
 
 /* MOBILE — FULL WIDTH NEWS CARDS */
