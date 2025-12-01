@@ -507,3 +507,77 @@ body{
     font-size: 0.95rem;
   }
 }
+
+/* ===========================
+   WHY GREEN MONKEY SECTION
+   =========================== */
+
+.why-section {
+  max-width: 1100px;
+  margin: 120px auto 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.why-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--green-neon);
+  text-shadow: 0 0 25px var(--solana-green);
+  margin-bottom: 45px;
+  letter-spacing: 1px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.why-box {
+  background: rgba(0,0,0,0.45);
+  border: 2px solid var(--solana-green);
+  box-shadow: 0 0 25px var(--solana-green);
+  border-radius: 18px;
+  padding: 30px 25px;
+  transition: 0.25s ease;
+}
+
+.why-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 40px var(--green-neon);
+}
+
+.why-heading {
+  color: var(--green-neon);
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  text-shadow: 0 0 15px var(--solana-green);
+}
+
+.why-text {
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  opacity: 0.95;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .why-section {
+    margin-top: 80px;
+  }
+}
+/* REMOVE SPACE between hero and WHY SECTION */
+.hero-wrap {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.hero {
+  margin-bottom: 0 !important;
+}
+
+.why-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
