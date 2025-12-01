@@ -534,6 +534,23 @@ body{
 }
 
 .why-box {
+.why-box {
+  padding: 90px 40px !important;     
+  min-height: 260px !important;      
+  border-radius: 22px !important;    
+  font-size: 1.2rem !important;      
+}
+
+.why-grid {
+  gap: 50px !important;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)) !important;
+}
+
+.why-title {
+  margin-bottom: 55px !important;
+  font-size: clamp(2.3rem, 5vw, 3.2rem) !important;
+}
+
   background: rgba(0,0,0,0.45);
   border: 2px solid var(--solana-green);
   box-shadow: 0 0 25px var(--solana-green);
