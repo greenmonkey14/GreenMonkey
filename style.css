@@ -159,16 +159,17 @@ body{
 
 /* SOCIAL BUTTON STYLE */
 .social-btn {
-  padding: 18px 50px;
-  font-size: 1.55rem;
-  border-radius: 14px;
+  padding: 26px 70px;            
+  font-size: 2rem;               
+  border-radius: 18px;
   border: 3px solid var(--solana-green);
   color: var(--text);
   text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 0 20px var(--solana-green);
+  font-weight: 700;
+  box-shadow: 0 0 25px var(--solana-green);
   transition: 0.25s ease;
 }
+
 
 .social-btn:hover {
   background: var(--solana-green);
@@ -176,18 +177,17 @@ body{
   transform: translateY(-3px);
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width: 768px) {
   .social-btn {
     width: 100%;
-    max-width: 320px;
-    text-align: center;
+    padding: 22px 0;
+    font-size: 1.7rem;
   }
 }
 
-/* ----------------------------- */
-/*    CHAT-STYLE NEWS SECTION    */
-/* ----------------------------- */
+
+
 
 .news-grid {
   width: 110%;
@@ -274,7 +274,7 @@ body{
 }
 
 .joinus-logo {
-  width: 360px;               
+  width: 560px;               
   max-width: 85%;
   display: block;
   margin: 0 auto 30px auto;    
@@ -454,7 +454,7 @@ body{
   /* JOIN US logo resize */
   .joinus-logo {
     max-width: 80%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   /* Mobile menu spacing */
