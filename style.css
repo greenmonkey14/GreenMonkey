@@ -190,7 +190,7 @@ body{
 /* ----------------------------- */
 
 .news-grid {
-  width: 100%;
+  width: 110%;
   margin-top: 70px;
   display: flex;
   flex-direction: column;
