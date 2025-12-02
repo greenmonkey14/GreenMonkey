@@ -599,7 +599,6 @@ body{
     margin-top: 80px;
   }
 }
-/* REMOVE SPACE between hero and WHY SECTION */
 .hero-wrap {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
@@ -612,4 +611,56 @@ body{
 .why-section {
   margin-top: 0 !important;
   padding-top: 0 !important;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 25px 10px;
+  color: var(--solana-green);
+  opacity: 0.9;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(20, 241, 149, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap; /* keeps it readable on very small screens */
+}
+
+.footer-link:hover {
+  text-shadow: 0 0 10px var(--solana-green);
+  color: var(--solana-green);
+}
+.footer-separator {
+  color: var(--solana-green);
+  opacity: 0.6;
+}
+
+
+.footer-link {
+  color: var(--green-neon);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.footer-links a {
+  color: var(--green-neon);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+  text-shadow: 0 0 10px var(--solana-green);
+  color: var(--solana-green);
+}
+
+/* MOBILE FOOTER FIX */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
