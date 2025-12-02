@@ -188,12 +188,18 @@ body{
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .social-button-group {
+    flex-wrap: wrap !important;   /* allow buttons to break line */
+    flex-direction: column;       /* stack vertically */
+    gap: 18px;
+  }
+
   .social-btn {
-    width: 100%;
-    padding: 22px 0;
-    font-size: 1.7rem;
+    width: 100% !important;       /* full width buttons on mobile */
+    justify-content: center;      /* center icon + text */
   }
 }
+
 
 
 
