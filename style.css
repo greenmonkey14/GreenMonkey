@@ -664,3 +664,83 @@ body{
     gap: 10px;
   }
 }
+/* ============================================
+   ✨ PROFESSIONAL LEGAL PAGE STYLING  
+   ============================================ */
+.legal-container {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(20,241,149,0.35);
+  box-shadow: 0 0 25px var(--solana-green);
+  border-radius: 18px;
+  padding: 45px 40px;
+  max-width: 900px;
+  margin: 140px auto 60px auto;
+  line-height: 1.65;
+  animation: fadeInSmooth 1.2s ease forwards;
+}
+
+.legal-container h1 {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+  text-shadow: 0 0 25px var(--green-neon);
+  color: var(--green-neon);
+}
+
+.legal-container .lead {
+  font-size: 1.15rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.legal-container h2 {
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: var(--solana-green);
+  text-shadow: 0 0 15px var(--solana-green);
+}
+
+.legal-container p,
+.legal-container ul li {
+  font-size: 1.05rem;
+  color: var(--text);
+  opacity: 0.95;
+  margin-bottom: 16px;
+}
+
+.legal-container ul {
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.legal-container ul li {
+  list-style: disc;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .legal-container {
+    padding: 30px 22px;
+    margin-top: 120px;
+  }
+
+  .legal-container h1 {
+    font-size: 2.1rem;
+  }
+
+  .legal-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .legal-container p,
+  .legal-container ul li {
+    font-size: 1rem;
+  }
+}
+.legal-container {
+  margin-top: 50px !important;  /
+}
+
+.hero-wrap {
+  padding-top: 60px !important;
+}
