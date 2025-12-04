@@ -1,7 +1,5 @@
-// ------------------------------
-// MOBILE MENU (your original code)
-// ------------------------------
 document.addEventListener("DOMContentLoaded", () => {
+  // ========== MOBILE MENU ==========
   const navToggle = document.getElementById("navToggle");
   const siteNav = document.getElementById("siteNav");
 
@@ -11,13 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
       navToggle.setAttribute("aria-expanded", isOpen);
     });
   }
-});
 
-// ------------------------------
-// NEWS PAGE AUTO-PAGINATION
-// ------------------------------
-document.addEventListener("DOMContentLoaded", () => {
-  const postsPerPage = 5; // <-- HOW MANY POSTS PER PAGE
+  // ========== NEWS PAGINATION ==========
+  const postsPerPage = 5;
   const container = document.getElementById("news-container");
   const pagination = document.getElementById("pagination");
 
@@ -25,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const posts = Array.from(container.getElementsByClassName("news-box"));
   const totalPages = Math.ceil(posts.length / postsPerPage);
-
   let currentPage = 1;
 
   function showPage(page) {
@@ -33,8 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     posts.forEach((post, index) => {
       post.style.display =
-        index >= (page - 1) * postsPerPage &&
-        index < page * postsPerPage
+        index >= (page - 1) * postsPerPage && index < page * postsPerPage
           ? "block"
           : "none";
     });
@@ -45,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderPagination() {
     pagination.innerHTML = "";
 
-    // PREVIOUS BUTTON
     const prev = document.createElement("button");
     prev.textContent = "« Prev";
     prev.className = "page-btn";
@@ -53,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     prev.onclick = () => showPage(currentPage - 1);
     pagination.appendChild(prev);
 
-    // PAGE NUMBERS
     for (let i = 1; i <= totalPages; i++) {
       const btn = document.createElement("button");
       btn.textContent = i;
@@ -63,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
       pagination.appendChild(btn);
     }
 
-    // NEXT BUTTON
     const next = document.createElement("button");
     next.textContent = "Next »";
     next.className = "page-btn";
@@ -72,6 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
     pagination.appendChild(next);
   }
 
-  // INIT
   showPage(1);
 });
