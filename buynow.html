@@ -1,9 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://www.google.com/" />
-    <title>Redirecting...</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Green Monkey (GRMK)</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Buy Green Monkey Coin (GRMK)" />
+  <meta name="description" content="Buy Green Monkey Coin (GRMK) on Solana. You will be redirected to Jupiter (jup.ag) to swap SOL for GRMK." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="home.html">
+      <img src="logo.png" alt="Green Monkey Logo" class="logo" />
+    </a>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="home.html" class="nav-link">Home</a>
+      <a href="news.html" class="nav-link">News</a>
+      <a href="community.html" class="nav-link">Community</a>
+      <a href="chart.html" class="nav-link">Chart</a>
+      <a href="buynow.html" class="nav-link active">Buy Now</a>
+    </nav>
+
+    <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="burger"></span>
+      <span class="burger"></span>
+      <span class="burger"></span>
+    </button>
+  </div>
+</header>
+
+<main class="buy-wrap">
+  <section class="buy-card">
+    <img src="logo.png" alt="Green Monkey Logo" class="buy-logo" />
+
+    <h1 class="buy-title">Buy Green Monkey (GRMK)</h1>
+    <p class="buy-text">
+      Green Monkey (GRMK) is a Solana-based token. To buy GRMK, you will be redirected to
+      <strong>Jupiter</strong> (jup.ag), the leading Solana swap aggregator.
+    </p>
+
+    <p class="buy-text">
+      Jupiter lets you swap <strong>SOL</strong> for <strong>GRMK</strong> using your wallet (Phantom, Solflare, Backpack, etc).
+      Always verify the token address before swapping.
+    </p>
+
+    <div class="token-box">
+      <div class="token-label">Official Green Monkey (GRMK) Token Address:</div>
+
+      <div class="token-row">
+        <code id="tokenAddress" class="token-code">
+          2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn
+        </code>
+
+        <button class="copy-btn" type="button" onclick="copyTokenAddress()">
+          Copy
+        </button>
+      </div>
+
+      <div class="token-hint">
+        Tip: You can paste this address into Jupiter to confirm you’re buying the correct token.
+      </div>
+    </div>
+
+    <a
+      class="buy-btn"
+      href="https://jup.ag/?sell=So11111111111111111111111111111111111111112&buy=2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Continue to Jupiter
+    </a>
+
+    <div class="external-note">
+      You are leaving greenmonkeycoin.com and visiting a third-party website (jup.ag).
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  © 2026 Green Monkey (GRMK). All rights reserved.
+  <span class="footer-separator">|</span>
+  <a href="terms.html" class="footer-link">Terms of Service</a>
+  <span class="footer-separator">|</span>
+  <a href="privacy.html" class="footer-link">Privacy Policy</a>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  function copyTokenAddress() {
+    const text = "2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn";
+    navigator.clipboard.writeText(text).then(() => {
+      // small, simple feedback without changing your global UI patterns
+      alert("Token address copied!");
+    });
+  }
+</script>
 </body>
 </html>

@@ -605,20 +605,17 @@ body {
    STATS ROW
 ========================== */
 
-
 .stats-row {
   display: flex;
   justify-content: center;
   align-items: stretch;
   gap: 25px;
   margin-top: 40px;
-
   flex-wrap: nowrap;
 }
 
-
 .stat-card {
-  width: 220px; 
+  width: 220px;
   min-width: 220px;
   padding: 22px 18px;
   background: rgba(0, 0, 0, 0.45);
@@ -627,7 +624,6 @@ body {
   text-align: center;
   box-shadow: 0 0 18px var(--solana-green);
 }
-
 
 .stat-icon {
   width: 45px;
@@ -689,7 +685,7 @@ body {
 
   /* MOBILE STAT CARD LAYOUT */
   .stats-row {
-    flex-wrap: wrap; /* allow stacking on mobile */
+    flex-wrap: wrap;
     gap: 18px;
   }
 
@@ -703,5 +699,156 @@ body {
   .stat-card {
     width: 100%;
     min-width: 100%;
+  }
+}
+
+/* ================= BUY NOW PAGE (ADDED) ================= */
+
+.buy-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 20px 50px; /* accounts for fixed header */
+}
+
+.buy-card {
+  width: 100%;
+  max-width: 920px;
+  text-align: center;
+  padding: 34px 26px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--solana-green);
+  border-radius: 18px;
+  box-shadow: 0 0 25px var(--solana-green);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.buy-logo {
+  width: min(300px, 60%);
+  max-width: 320px;
+  margin: 0 auto 16px;
+  display: block;
+  filter: drop-shadow(0 0 25px var(--green-neon))
+          drop-shadow(0 0 45px var(--solana-green));
+}
+
+.buy-title {
+  color: var(--green-neon);
+  text-shadow: 0 0 18px var(--solana-green);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 14px;
+}
+
+.buy-text {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.6;
+  opacity: 0.95;
+  margin: 10px auto;
+  max-width: 760px;
+}
+
+.token-box {
+  margin: 22px auto 18px;
+  max-width: 820px;
+  padding: 16px 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(20, 241, 149, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(20, 241, 149, 0.25);
+}
+
+.token-label {
+  font-size: 0.95rem;
+  color: var(--solana-green);
+  opacity: 0.95;
+  margin-bottom: 10px;
+}
+
+.token-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.token-code {
+  color: var(--green-neon);
+  font-size: 0.95rem;
+  word-break: break-all;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 157, 0.25);
+  background: rgba(0, 30, 22, 0.35);
+  box-shadow: inset 0 0 18px rgba(0, 255, 157, 0.08);
+}
+
+.copy-btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 2px solid var(--solana-green);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 0 14px rgba(20, 241, 149, 0.35);
+}
+
+.copy-btn:hover {
+  background: var(--solana-green);
+  color: #00150e;
+  box-shadow: 0 0 22px var(--solana-green);
+  transform: translateY(-2px);
+}
+
+.token-hint {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.buy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 16px 30px;
+  font-size: 1.25rem;
+  border-radius: 14px;
+  border: 2px solid var(--solana-green);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 0 20px var(--solana-green);
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+
+.buy-btn:hover {
+  background: var(--solana-green);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.external-note {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: var(--solana-green);
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .buy-card {
+    padding: 28px 18px;
+  }
+
+  .token-code {
+    font-size: 0.9rem;
+  }
+
+  .buy-btn {
+    width: 100%;
   }
 }
