@@ -125,8 +125,8 @@ body {
 }
 
 .hero-logo {
-  width: min(650px, 75%);
-  max-width: 650px;
+  width: min(450px, 45%);
+  max-width: 450px;
   margin: 0 auto 18px;
   filter: drop-shadow(0 0 25px var(--green-neon))
           drop-shadow(0 0 50px var(--solana-green));
