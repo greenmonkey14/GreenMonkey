@@ -83,6 +83,32 @@ body {
   transform: translateY(-1px);
 }
 
+/* ==========================
+   NAV HARD OVERRIDE (FIX PURPLE VISITED LINKS)
+   - Styles ANY <a> inside .site-nav (even if missing .nav-link)
+   - Forces :visited to stay neon green
+========================== */
+
+.site-nav a,
+.site-nav a:visited,
+.site-nav a:active {
+  color: var(--green-neon) !important;
+  text-decoration: none !important;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  transition: 0.22s;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  text-shadow: 0 0 14px var(--green-neon);
+  transform: translateY(-1px);
+}
+
+/* If you add class="active" on the current page link */
+.site-nav a.active {
+  text-shadow: 0 0 14px var(--green-neon);
+}
+
 /* MOBILE BURGER BUTTON */
 
 .nav-toggle {
@@ -601,6 +627,7 @@ body {
     font-size: 0.95rem;
   }
 }
+
 /* ==========================
    STATS ROW
 ========================== */
