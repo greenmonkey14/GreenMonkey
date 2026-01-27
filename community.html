@@ -5,26 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Green Monkey — Join Us</title>
 
-  <!-- SEO / OG same as home -->
+  <!-- SEO -->
   <meta name="title" content="Green Monkey Coin (GRMK) – Fast, Fun & Unstoppable" />
-  <meta name="description" content="Green Monkey Coin (GRMK) is a fast, fun, and unstoppable meme token built on Solana. Join the community, follow updates, and be part of the future of meme culture." />
-  <meta name="keywords" content="Green Monkey Coin, GRMK, Solana meme coin, crypto, meme token, Solana token, green monkey crypto, greenmonkeycoin" />
+  <meta name="description" content="Join the Green Monkey (GRMK) community on Solana. Official links to Telegram, X, and Discord." />
+  <meta name="keywords" content="Green Monkey Coin, GRMK, Solana meme coin, crypto, meme token, green monkey crypto, greenmonkeycoin" />
   <meta name="author" content="Green Monkey Team" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://greenmonkeycoin.com/community.html" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://greenmonkeycoin.com/" />
-  <meta property="og:title" content="Green Monkey Coin (GRMK)" />
-  <meta property="og:description" content="A fast, fun, and unstoppable Solana meme token. Join the Green Monkey community!" />
+  <meta property="og:url" content="https://greenmonkeycoin.com/community.html" />
+  <meta property="og:title" content="Green Monkey Coin (GRMK) — Community" />
+  <meta property="og:description" content="Join the official Green Monkey (GRMK) community: Telegram, X, and Discord." />
   <meta property="og:image" content="https://greenmonkeycoin.com/images/logo.png" />
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://greenmonkeycoin.com/" />
-  <meta name="twitter:title" content="Green Monkey Coin (GRMK)" />
-  <meta name="twitter:description" content="A fast, fun, and unstoppable Solana meme token." />
+  <meta name="twitter:url" content="https://greenmonkeycoin.com/community.html" />
+  <meta name="twitter:title" content="Green Monkey Coin (GRMK) — Community" />
+  <meta name="twitter:description" content="Join the official Green Monkey (GRMK) community: Telegram, X, and Discord." />
   <meta name="twitter:image" content="https://greenmonkeycoin.com/images/logo.png" />
 
-  <link rel="icon" href="joinUsLogo.png" type="image/png" />
+  <!-- Favicon (absolute URL to avoid crawler issues) -->
+  <link rel="icon" href="https://greenmonkeycoin.com/images/joinUsLogo.png" type="image/png" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -32,17 +38,17 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="home.html">
-      <img src="logo.png" alt="Green Monkey Logo" class="logo" />
+    <a class="brand" href="home.html" aria-label="Green Monkey Home">
+      <img src="https://greenmonkeycoin.com/images/logo.png" alt="Green Monkey Logo" class="logo" loading="eager" />
     </a>
 
-    <nav class="site-nav" id="siteNav">
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
       <a href="home.html" class="nav-link">Home</a>
       <a href="news.html" class="nav-link">News</a>
       <a href="community.html" class="nav-link">Community</a>
       <a href="chart.html" class="nav-link">Chart</a>
       <a href="buynow.html" class="nav-link">Buy Now</a>
-      <a href="tokenomics.html">Tokenomics</a>
+      <a href="tokenomics.html" class="nav-link">Tokenomics</a>
     </nav>
 
     <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -54,22 +60,45 @@
 </header>
 
 <main class="hero-wrap">
-  <section class="hero">
-    <img src="joinUsLogo.png" alt="Join Us Logo" class="joinus-logo" />
+  <section class="hero" aria-label="Community links">
+    <img
+      src="https://greenmonkeycoin.com/images/joinUsLogo.png"
+      alt="Join the Green Monkey Community"
+      class="joinus-logo"
+      loading="eager"
+    />
 
     <div class="social-button-group">
-      <a href="https://t.me/grmkCoin" target="_blank" class="social-btn">
-        <img src="icons/telegram.png" class="social-icon" alt="Telegram" />
+      <a
+        href="https://t.me/grmkCoin"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-btn"
+        aria-label="Join Green Monkey on Telegram"
+      >
+        <img src="https://greenmonkeycoin.com/icons/telegram.png" class="social-icon" alt="Telegram" loading="lazy" />
         Telegram
       </a>
 
-      <a href="https://x.com/GRMK389854" target="_blank" class="social-btn">
-        <img src="icons/twitter.png" class="social-icon" alt="Twitter / X" />
-        Twitter / X
+      <a
+        href="https://x.com/GRMK389854"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-btn"
+        aria-label="Follow Green Monkey on X"
+      >
+        <img src="https://greenmonkeycoin.com/icons/twitter.png" class="social-icon" alt="X (Twitter)" loading="lazy" />
+        X / Twitter
       </a>
 
-      <a href="https://discord.com/invite/E9mEh2d7CW" target="_blank" class="social-btn">
-        <img src="icons/discord.png" class="social-icon" alt="Discord" />
+      <a
+        href="https://discord.com/invite/E9mEh2d7CW"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-btn"
+        aria-label="Join Green Monkey on Discord"
+      >
+        <img src="https://greenmonkeycoin.com/icons/discord.png" class="social-icon" alt="Discord" loading="lazy" />
         Discord
       </a>
     </div>
