@@ -1,11 +1,14 @@
-
+/* =========================
+   FULL WIDTH CHART PAGE
+========================= */
 
 /* PAGE WRAPPER */
 .chart-page-container {
-  padding-top: 140px;
-  max-width: 1100px;
-  margin: auto;
-  animation: fadeInSmooth 1s ease forwards;
+  padding-top: 120px; /* space for fixed header */
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  animation: fadeInSmooth 0.8s ease forwards;
 }
 
 /* TITLES */
@@ -16,38 +19,67 @@
   text-shadow: 0 0 25px var(--green-neon);
   margin-bottom: 10px;
   letter-spacing: 1px;
+  padding: 0 12px;
 }
 
 .chart-subtitle {
   text-align: center;
   font-size: 1.1rem;
   opacity: 0.9;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+  padding: 0 12px;
 }
 
-/* CHART WRAPPER */
+/* CHART WRAPPER (FULL WIDTH) */
 .chart-wrapper {
-  width: 100%;
-  height: 650px;
-  border-radius: 18px;
+  width: 90vw;
+  max-width: 90vw;
+  height: calc(100vh - 220px);
+  margin: 0 auto;
+  border-radius: 0;
   overflow: hidden;
+
   box-shadow: 0 0 30px var(--solana-green);
-  border: 1px solid rgba(20,241,149,0.35);
+  border-top: 1px solid rgba(20,241,149,0.35);
+  border-bottom: 1px solid rgba(20,241,149,0.35);
   background: rgba(0, 0, 0, 0.4);
+}
+
+/* IFRAME */
+.chart-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  .chart-wrapper {
-    height: 500px;
-  }
-
   .chart-title {
     font-size: 2rem;
   }
 
   .chart-subtitle {
     font-size: 1rem;
+  }
+
+  .chart-wrapper {
+    height: calc(100vh - 200px);
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+  .chart-title {
+    font-size: 1.7rem;
+  }
+
+  .chart-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .chart-wrapper {
+    height: calc(100vh - 190px);
   }
 }
 

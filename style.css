@@ -395,6 +395,8 @@ body {
   max-width: 900px;
   margin: 120px auto 60px auto;
   line-height: 1.65;
+  overflow: hidden;
+
 }
 
 .legal-container h1 {
@@ -879,6 +881,11 @@ body {
     width: 100%;
   }
 }
+
+/* ==========================
+   TOKENOMICS FIXES (ADDED)
+========================== */
+
 /* Tokenomics on-chain links color fix */
 .legal-container a {
   color: #00ff9c;          /* neon green like your theme */
@@ -891,10 +898,35 @@ body {
   text-decoration: underline;
 }
 
+/* Bigger link icon (mobile friendly) */
 .link-icon {
-  width: 14px;
-  height: 14px;
-  margin-left: 6px;
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
   vertical-align: middle;
-  filter: drop-shadow(0 0 4px #00ff9c);
+  filter: drop-shadow(0 0 6px #00ff9c);
+}
+
+/* Mint address box */
+
+.mint-box {
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: rgba(0, 255, 156, 0.08);
+  border: 1px solid rgba(0, 255, 156, 0.4);
+  border-radius: 10px;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #00ff9c;
+
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  /* ✅ show full mint on mobile */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }

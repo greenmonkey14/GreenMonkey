@@ -3,24 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Buy Green Monkey (GRMK)</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://greenmonkeycoin.com/buynow.html" />
 
   <!-- Primary Meta Tags -->
   <meta name="title" content="Buy Green Monkey Coin (GRMK)" />
   <meta name="description" content="Buy Green Monkey Coin (GRMK) on Solana. You will be redirected to Jupiter (jup.ag) to swap SOL for GRMK." />
   <meta name="robots" content="index, follow" />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://greenmonkeycoin.com/buynow.html" />
+  <meta property="og:title" content="Buy Green Monkey (GRMK)" />
+  <meta property="og:description" content="Buy GRMK on Solana. You will be redirected to Jupiter (jup.ag) to swap SOL for GRMK." />
+  <meta property="og:image" content="https://greenmonkeycoin.com/logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://greenmonkeycoin.com/buynow.html" />
+  <meta name="twitter:title" content="Buy Green Monkey (GRMK)" />
+  <meta name="twitter:description" content="Buy GRMK on Solana. You will be redirected to Jupiter (jup.ag) to swap SOL for GRMK." />
+  <meta name="twitter:image" content="https://greenmonkeycoin.com/logo.png" />
+
   <!-- Favicon -->
-  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="icon" href="https://greenmonkeycoin.com/logo.png" type="image/png" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="home.html">
-      <img src="logo.png" alt="Green Monkey Logo" class="logo" />
+      <img src="https://greenmonkeycoin.com/logo.png" alt="Green Monkey Logo" class="logo" />
     </a>
 
     <nav class="site-nav" id="siteNav">
@@ -29,7 +48,7 @@
       <a href="community.html" class="nav-link">Community</a>
       <a href="chart.html" class="nav-link">Chart</a>
       <a href="buynow.html" class="nav-link active">Buy Now</a>
-      <a href="tokenomics.html">Tokenomics</a>
+      <a href="tokenomics.html" class="nav-link">Tokenomics</a>
     </nav>
 
     <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -44,6 +63,7 @@
   <section class="buy-card">
 
     <h1 class="buy-title">Buy Green Monkey (GRMK)</h1>
+
     <p class="buy-text">
       Green Monkey (GRMK) is a Solana-based token. To buy GRMK, you will be redirected to
       <strong>Jupiter</strong> (jup.ag), the leading Solana swap aggregator.
@@ -72,18 +92,17 @@
       </div>
     </div>
 
-    <a
-      class="buy-btn"
-      href="https://jup.ag/?sell=So11111111111111111111111111111111111111112&buy=2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Continue to Jupiter
+    <a class="buy-btn"
+       href="https://jup.ag/tokens/2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn"
+       target="_blank"
+       rel="noopener noreferrer">
+      Buy on Jupiter ↗
     </a>
 
     <div class="external-note">
-      You are leaving greenmonkeycoin.com and visiting a third-party website (jup.ag).
+      You are leaving greenmonkeycoin.com and visiting a third-party site (jup.ag).
     </div>
+
   </section>
 </main>
 
@@ -96,14 +115,15 @@
 </footer>
 
 <script src="script.js"></script>
+
 <script>
   function copyTokenAddress() {
-    const text = "2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn";
-    navigator.clipboard.writeText(text).then(() => {
-      // small, simple feedback without changing your global UI patterns
+    const tokenAddress = document.getElementById("tokenAddress").innerText.trim();
+    navigator.clipboard.writeText(tokenAddress).then(() => {
       alert("Token address copied!");
     });
   }
 </script>
+
 </body>
 </html>

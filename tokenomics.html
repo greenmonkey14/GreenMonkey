@@ -33,14 +33,37 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Small link icon style -->
   <style>
-    .link-icon {
-      width: 14px;
-      height: 14px;
-      margin-left: 6px;
-      vertical-align: middle;
-      filter: drop-shadow(0 0 4px #00ff9c);
+    /* Copy button styles */
+    .mint-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .copy-btn {
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 2px solid #14F195;
+      background: rgba(0,0,0,0.25);
+      color: #c8ffe7;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+      box-shadow: 0 0 10px rgba(20,241,149,0.35);
+      white-space: nowrap;
+    }
+
+    .copy-btn:hover {
+      background: #14F195;
+      color: #00150e;
+      box-shadow: 0 0 18px #14F195;
+    }
+
+    .copy-btn.copied {
+      background: #14F195;
+      color: #00150e;
     }
   </style>
 </head>
@@ -78,39 +101,20 @@
       simple token structure, and long-term community growth.
     </p>
 
-    <!-- Stats -->
     <div class="stats-row" style="margin-top: 28px;">
-
       <div class="stat-card">
         <div class="stat-number">Solana</div>
         <div class="stat-label">Blockchain</div>
       </div>
-
       <div class="stat-card">
         <div class="stat-number">1B</div>
         <div class="stat-label">Total Supply</div>
       </div>
-
       <div class="stat-card">
         <div class="stat-number">6</div>
         <div class="stat-label">Decimals</div>
       </div>
     </div>
-
-    <h2>Supply</h2>
-    <p>
-      GREEN MONKEY (GRMK) has a fixed total supply of <strong>1,000,000,000</strong> tokens.
-      The supply is designed to be predictable and transparent. There is no inflationary mechanism.
-    </p>
-
-    <h2>Distribution</h2>
-    <p>
-      The token supply was allocated to enable public trading and liquidity on Solana decentralized exchanges.
-      Liquidity was provided to support market access for traders and community members.
-    </p>
-    <p>
-      Token supply and holder distribution can be verified on-chain through public explorers.
-    </p>
 
     <h2>🔍 On-Chain Verification</h2>
     <p>
@@ -119,23 +123,30 @@
 
     <ul>
       <li>
-        <strong>Mint Address:</strong><br>
-        <code>2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn</code>
+        <strong>Mint Address:</strong>
+
+        <div class="mint-row">
+          <div id="mintValue" class="mint-box">
+            2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn
+          </div>
+
+          <button class="copy-btn" id="copyBtn" onclick="copyMint()">
+            Copy
+          </button>
+        </div>
       </li>
 
       <li>
         <strong>Solscan Explorer:</strong><br>
         <a href="https://solscan.io/token/2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn" target="_blank" rel="noopener noreferrer">
-          View on Solscan
-          <img src="https://greenmonkeycoin.com/icons/link.png" class="link-icon" alt="external link">
+          View on Solscan ↗
         </a>
       </li>
 
       <li>
         <strong>Jupiter:</strong><br>
         <a href="https://jup.ag/tokens/2De7eTCZSoQhH1R7gc7182y9pUqr7U7G6NYoYcZ4uctn" target="_blank" rel="noopener noreferrer">
-          View on Jupiter
-          <img src="https://greenmonkeycoin.com/icons/link.png" class="link-icon" alt="external link">
+          View on Jupiter ↗
         </a>
       </li>
     </ul>
@@ -157,5 +168,24 @@
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+  function copyMint() {
+    const text = document.getElementById("mintValue").innerText.trim();
+    const btn = document.getElementById("copyBtn");
+
+    navigator.clipboard.writeText(text).then(() => {
+      const old = btn.innerText;
+      btn.innerText = "Copied!";
+      btn.classList.add("copied");
+
+      setTimeout(() => {
+        btn.innerText = old;
+        btn.classList.remove("copied");
+      }, 1500);
+    });
+  }
+</script>
+
 </body>
 </html>
